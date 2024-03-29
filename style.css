@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Jacques+Francois+Shadow&family=Kaushan+Script&family=Kurale&family=Libre+Barcode+128+Text&family=Norican&family=Original+Surfer&display=swap');
+
+html,body{
+    margin: 0;
+}
+
+/* CONTAINER STYLING */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 375px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* HEADER STYLING */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.header > h1{
+    font-family: "Jacques Francois Shadow", serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 0em;
+}
+
+nav{
+    width: 100%;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    font-family: "Original Surfer", sans-serif;
+    font-size: 1.5rem;
+}
+
+ul>li{
+    cursor: pointer;
+}
+
+
+/* SECTION ONE STYLING */
+.section-one{
+    width: 100%;
+    margin-top: 0em;
+}
+
+.first-row,
+.second-row{
+    display: flex;
+    justify-content: center;
+    width: inherit;
+}
+
+.img-one{
+    width: 45%;
+    
+}
+
+.img-two{
+    width: 55%;
+}
+
+
+.img-three{
+    width: 100%;
+}
+
+/* SECTION TWO STYLING */
+
+.section-two{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section-two > h2{
+    font-family: "Kaushan Script", cursive;
+    text-shadow: 1px 1px 10px #9d8a79;
+}
+
+.gif-one{
+    background: url('./assets/gif/gif-one.gif');
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+}
+
+/* SECTION THREE STYLING */
+
+.section-three{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.section-three > h2{
+    font-family: "Norican", cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.section-three > h3{
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-top: 0.5em;
+}
+
+.hairstyle-one{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 300px;
+    border: 2px solid #9d8a79;
+    border-radius: 10%;
+    margin-bottom: 1.5em;
+}
+
+.hairstyle-one > img{
+    width: 75%;
+}
+
+.hairstyle-one > h3{
+    margin: 1em 0 0 0;
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+/* SECTION FOUR STYLING */
+
+.section-four{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.section-four > h2{
+    font-family: "Norican", cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+/* SECTION FIVE STYLING */
+.section-five{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.barbers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 300px;
+    border: 2px solid #9d8a79;
+    border-radius: 10%;
+    margin-bottom: 1.5em;
+}
+
+.barber-one{
+    background: url('./assets/gif/barber/barber-one.gif');
+    background-size: cover;
+    height: 250px;
+    width: 80%;
+    margin-top: 1em;
+}
+
+.barber-two{
+    background: url('./assets/gif/barber/barber-two.gif');
+    background-size: cover;
+    height: 250px;
+    width: 80%;
+    margin-top: 1em;
+}
+
+.barber-three{
+    background: url('./assets/gif/barber/barber-three.gif');
+    background-size: cover;
+    height: 250px;
+    width: 80%;
+    margin-top: 1em;
+}
