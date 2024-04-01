@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BENTHLE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <h1>Billing</h1>
+            </div>
+            <hr>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="section-bill">
+                <input 
+                    type="text"
+                    placeholder="Your Name"
+                    class="user-detail"
+                    id="user-detail"
+                    required
+                >
+                <input 
+                    type="text"
+                    placeholder="Contact"
+                    class="user-contact"
+                    id="user-contact"
+                    required
+                >
+                <h2 id="hairstyle-detail">Hairstyle: Messy quiff</h2>
+                <h2 id="barber-detail">Barber: Bunny</h2>
+                <button class="book" id="book" type="button">Book</button>
+                <p>Let's Schedule it</p>
+            </div>
+        </div>
+    </section>
+    <section id="modal">
+        <div class="container">
+            <div class="modal">
+                <div class="gif-booked"></div>
+                <h3 id="modal-user">Awesome Divv!</h3>
+                <h3>"Life is too short to have boring hair."</h3>
+            </div>
+        </div>
+    </section>
+    <script src="billing.js" type="module"></script>
+</body>
+</html>

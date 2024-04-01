@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Jacques+Francois+Shadow&family=Kaushan+Script&family=Kurale&family=Libre+Barcode+128+Text&family=Norican&family=Original+Surfer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Irish+Grover&family=Jacques+Francois+Shadow&family=Kaushan+Script&family=Kurale&family=Libre+Barcode+128+Text&family=Norican&family=Original+Surfer&display=swap');
+
 
 html,body{
     margin: 0;
@@ -43,6 +44,12 @@ ul{
     list-style: none;
     font-family: "Original Surfer", sans-serif;
     font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 ul>li{
@@ -134,6 +141,11 @@ ul>li{
     margin-bottom: 1.5em;
 }
 
+.hairstyle-one:hover{
+    background-color: #7D70BA;
+    color: #343633;
+}
+
 .hairstyle-one > img{
     width: 75%;
 }
@@ -157,8 +169,19 @@ ul>li{
 .section-four > h2{
     font-family: "Norican", cursive;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-four > p{
+    text-align: center;
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    padding: 0.5em 0.5em 0 0.5em;
+    margin: 0 auto 2em;
+    
 }
 
 /* SECTION FIVE STYLING */
@@ -167,6 +190,20 @@ ul>li{
     flex-direction: column;
     align-items: center;
     width: 100%;
+}
+
+.section-five > h2{
+    font-family: "Norican", cursive;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+.section-five > h3{
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    margin-top: 0.5em;
 }
 
 .barbers{
@@ -179,6 +216,16 @@ ul>li{
     border: 2px solid #9d8a79;
     border-radius: 10%;
     margin-bottom: 1.5em;
+}
+
+.barbers > h3{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.barbers:hover{
+    background-color: #93867F;
 }
 
 .barber-one{
@@ -203,4 +250,121 @@ ul>li{
     height: 250px;
     width: 80%;
     margin-top: 1em;
+}
+
+/* BILL STYLING */
+.section-bill{
+    margin-top: 1em;
+}
+
+.section-bill > input{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    font-family: "Berkshire Swash", serif;
+    font-size: 1.25rem;
+    padding: 0.25em;
+    margin-bottom: 1em;
+    max-width: 235px;
+}
+
+.section-bill > p{
+    font-family: "Libre Barcode 128 Text", system-ui;
+    font-weight: 400;
+    font-size: 2.75rem;
+}
+
+.section-bill > h2{
+    font-family: "Berkshire Swash", serif;
+    font-weight: 400;
+}
+
+button{
+    width: 100%;
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: #FFDE00;
+    border: none;
+    border-radius: 20px;
+    padding: 0.25em;
+}
+
+button:hover{
+    font-size: 1.75rem;
+    background-color: #ffaa00;
+}
+
+/* MODAL STYLING */
+#modal{
+    display: none;
+}
+
+.modal{
+    width: 350px;
+    border: 2px solid black;
+    position: fixed;
+    top: 10vh;
+    border-radius: 20px;
+    background-color: white;
+    padding: 1em;
+}
+
+.gif-booked{
+    background: url('./assets/gif/booked.gif');
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.modal > h3{
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+/* FOOTER STYLING */
+.footer{
+    font-family: "Irish Grover", system-ui;
+    font-weight: 400;
+    width: 100%;
+    font-size: 1rem;
+    background-color: #4D5057;
+    color: #CFCFCF;
+}
+
+.footer > h2{
+    padding: 1em;
+    width: 45%;
+    margin: 0 auto;
+}
+
+
+/* ADMIN STYLING */
+
+.users{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.store-user{
+    padding: 0 0 0 1em;
+    background-color: #ffafcc;
+    color: black;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.store-user > h2{
+    font-family: "Kurale", serif;
+    font-weight: 400;
+    margin: 0;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BENTHLE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
                 <h1>BENTHLE</h1>
                 <nav>
                     <ul>
-                        <li><a onchange="">about</a></li>
+                        <li><a href="./admin.html">admin</a></li>
                         <li><a onchange="">services</a></li>
                         <li><a onchange="">location</a></li>
                     </ul>
@@ -45,22 +45,42 @@
         </div>
     </section>
 
-    <section>
+    <section id="sectionthree">
         <div class="container">
             <div class="section-three">
                 <h2>Services</h2>
                 <h3>Select your hairstyle</h3>
-                <div class="hairstyle-one">
-                    <img src="./assets/hiarstyles/style-one.png" alt="hair style">
+                <div class="hairstyle-one" id="hairstyle-1">
+                    <img src="./assets/hiarstyles/style-one.png" alt="hair style" id="hairstyle-1">
                     <h3>Messy quiff</h3>
                 </div>
-                <div class="hairstyle-one">
-                    <img src="./assets/hiarstyles/style-two.png" alt="hair style">
+                <div class="hairstyle-one" id="hairstyle-2">
+                    <img src="./assets/hiarstyles/style-two.png" alt="hair style" id="hairstyle-2">
                     <h3>Pompadour</h3>
                 </div>
-                <div class="hairstyle-one">
-                    <img src="./assets/hiarstyles/style-three.png" alt="hair style">
+                <div class="hairstyle-one"id="hairstyle-3"> 
+                    <img src="./assets/hiarstyles/style-three.png" alt="hair style" id="hairstyle-3">
                     <h3>Crew Cut</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sectionfive">
+        <div class="container">
+            <div class="section-five">
+                <h2>Services</h2>
+                <h3>Select your Barber</h3>
+                <div class="barbers" id="barber-1">
+                   <div class="barber-one" id="barber-1"></div>
+                   <h3>Bunny</h3>
+                </div>
+                <div class="barbers" id="barber-2">
+                    <div class="barber-two" id="barber-2"></div>
+                   <h3>Kenny</h3>
+                </div>
+                <div class="barbers" id="barber-3">
+                    <div class="barber-three" id="barber-3"></div>
+                    <h3>Rose</h3>
                 </div>
             </div>
         </div>
@@ -69,28 +89,21 @@
         <div class="container">
             <div class="section-four">
                 <h2>Location</h2>
+                <p>Located next to SpaceX headquarters, 
+                    our barbers specialize in futuristic haircuts and cosmic beard trims. 
+                    <br>Elon Musk approved!
+                </p>
             </div>
         </div>
     </section>
-    <section>
+    
+    <footer>
         <div class="container">
-            <div class="section-five">
-                <h2>Services</h2>
-                <h3>Select your hairstyle</h3>
-                <div class="barbers">
-                   <div class="barber-one"></div>
-                   <h3>Bunny</h3>
-                </div>
-                <div class="barbers">
-                    <div class="barber-two"></div>
-                   <h3>Kenny</h3>
-                </div>
-                <div class="barbers">
-                    <div class="barber-three"></div>
-                    <h3>Rose</h3>
-                </div>
+            <div class="footer">
+                <h2>Design & Built by Divv Saxena</h2>
             </div>
         </div>
-    </section>
+    </footer>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
