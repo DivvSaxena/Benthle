@@ -1,35 +1,5 @@
-
-/* FIREBASE */
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase ,ref , push as pushed , onValue} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
-import { getAuth,
-    signInWithEmailAndPassword,
-    createUserWithEmailAndPassword,
-    onAuthStateChanged,
-    signInWithPopup,
-    GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
-
-// UI ELEMENTS
-
-/* SELECTING ELEMENT */
-const userDetailEl = document.getElementById('user-detail')
-const userContactEl = document.getElementById('user-contact')
-
-const hairstyleDetailEl = document.getElementById('hairstyle-detail')
-const barberDetailEl = document.getElementById('barber-detail')
-const bookEl = document.getElementById('book')
-const modalUserEl = document.getElementById('modal-user')
-const modal = document.getElementById('modal')
-const users = document.getElementById('users')
-
-const emailInputEl = document.getElementById('email-input')
-const passwordInputEl = document.getElementById('password-input')
-
-const signInWithGoogle = document.getElementById('sign-in-with-google')
-const signInBtnEl = document.getElementById('sign-in-btn')
-const createAccountBtnEl = document.getElementById('create-account-btn')
-
-
 
 const firebaseConfig = {
     apiKey: "AIzaSyAFFpetgRFF8LoAClB7zVXUhceT8EKmn0A",
@@ -43,91 +13,23 @@ const firebaseConfig = {
 
 
   // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app)
-const userInDB = ref(database,"users")
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app)
+  const userInDB = ref(database,"users")
 
 
-const loggedInView = document.getElementById('loggedInView')
-const loggedOutView = document.getElementById('loggedOutView')
+/* SELECTING ELEMENT */
+const userDetailEl = document.getElementById('user-detail')
+const userContactEl = document.getElementById('user-contact')
 
-// For Auth
-const auth = getAuth(app)
-const provider = new GoogleAuthProvider()
-
-/* EVENT LISTENERS */
-signInBtnEl.addEventListener('click', authSignInWithEmail)
-createAccountBtnEl.addEventListener('click', authCreateAccountWithEmail)
-
-signInWithGoogle.addEventListener('click', authSignUpWithGoogle)
+const hairstyleDetailEl = document.getElementById('hairstyle-detail')
+const barberDetailEl = document.getElementById('barber-detail')
+const bookEl = document.getElementById('book')
+const modalUserEl = document.getElementById('modal-user')
+const modal = document.getElementById('modal')
+const users = document.getElementById('users')
 
 
-onAuthStateChanged(auth, (user) => {
-    if(user){
-        showLoggedInView()
-    } else {
-        showLoggedOutView()
-    }
-})
-
-function authSignUpWithGoogle(){
-    signInWithPopup(auth, provider)
-  .then((result) => {
-    console.log('Sign in With Google')
-  }).catch((error) => {
-     alert(error.message)
-  })
-}
-
-function authSignInWithEmail(){
-
-    const email = emailInputEl.value
-    const password = passwordInputEl.value
-
-    signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        clearAuthFields()
-    })
-    .catch((error) => {
-        alert(error.message)
-    })
-}
-
-function authCreateAccountWithEmail(){
-
-    const email = emailInputEl.value
-    const password = passwordInputEl.value
-
-    createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-        clearAuthFields()
-    })
-    .catch((error) => {
-        alert(error.message)
-    })
-}
-
-function clearAuthFields(){
-    emailInputEl.value = ''
-    passwordInputEl.value = ''
-}
-
-
-onValue(userInDB , (snapshot) => {
-    let itemArray = Object.entries(snapshot.val())
-    let feedHtml = ''
-
-    console.log(itemArray)
-
-    for(let item = itemArray.length - 1; item >= 0; item--){
-        let currentItem = itemArray[item][1]
-        console.log(currentItem)
-        feedHtml += getFeed(currentItem)
-        
-    }
-
-    render(feedHtml)
-})
 
 const bookingArray = JSON.parse(localStorage.getItem('bookingArray'))
 
