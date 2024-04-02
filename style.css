@@ -279,7 +279,7 @@ ul>li{
     font-weight: 400;
 }
 
-button{
+.book{
     width: 100%;
     font-family: "Irish Grover", system-ui;
     font-weight: 400;
@@ -291,7 +291,7 @@ button{
     padding: 0.25em;
 }
 
-button:hover{
+.book:hover{
     font-size: 1.75rem;
     background-color: #ffaa00;
 }
@@ -367,4 +367,61 @@ button:hover{
     font-family: "Kurale", serif;
     font-weight: 400;
     margin: 0;
+}
+
+/* AUTH PAGE STYLING */
+.providers-btn{
+    background-color: #FFFEFC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 320px;
+    padding: 0.5em;
+    border: 1px solid black;
+    border-radius: none;
+    font-size: 1.5rem;
+    height: 70px;
+    font-family: "Kurale", serif;
+    cursor: pointer;
+    margin-top: 1em;
+
+}
+
+.providers-btn > img{
+    width: 15%;
+}
+
+.auth-fields-and-buttons{
+    display: flex;
+    flex-direction: column;
+    max-width: 320px;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.auth-fields-and-buttons > input{
+    font-family: "Kurale", serif;
+    font-size: 1.5rem;
+    padding: 0.25em;
+    text-align: center;
+    background-color: #FFFEFC;
+    border: 1px solid black;
+}
+
+.auth-fields-and-buttons > button{
+    font-family: "Kurale", serif;
+    font-size: 1.5rem;
+    padding: 0.25em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.primary-btn{
+    background-color: #FFDE00;
+    border: 1px solid black;
+}
+
+.secondary-btn{
+    background-color: #62EEA8;
+    border: 1px solid black;
 }

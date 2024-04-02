@@ -1,9 +1,26 @@
 /* SELECTING ELEMENTS */
 const sectionThreeEl = document.getElementById('sectionthree')
 const sectionFiveEl = document.getElementById('sectionfive')
+const locationEl = document.getElementById('location')
 
 let obj = {hairstyle: '',barber:''}
 let array = []
+
+function scrollFunctionOne(){
+    sectionThreeEl.scrollIntoView({
+        block:'start',
+        behavior:'smooth',
+        inline:'start'
+    })
+}
+
+function scrollFunctionTwo(){
+    locationEl.scrollIntoView({
+        block:'start',
+        behavior:'smooth',
+        inline:'start'
+    })
+}
 
 showHairStyles()
 

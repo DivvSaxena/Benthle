@@ -9,6 +9,28 @@ import { getAuth,
     signInWithPopup,
     GoogleAuthProvider} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js"
 
+// UI ELEMENTS
+
+/* SELECTING ELEMENT */
+const userDetailEl = document.getElementById('user-detail')
+const userContactEl = document.getElementById('user-contact')
+
+const hairstyleDetailEl = document.getElementById('hairstyle-detail')
+const barberDetailEl = document.getElementById('barber-detail')
+const bookEl = document.getElementById('book')
+const modalUserEl = document.getElementById('modal-user')
+const modal = document.getElementById('modal')
+const users = document.getElementById('users')
+
+const emailInputEl = document.getElementById('email-input')
+const passwordInputEl = document.getElementById('password-input')
+
+const signInWithGoogle = document.getElementById('sign-in-with-google')
+const signInBtnEl = document.getElementById('sign-in-btn')
+const createAccountBtnEl = document.getElementById('create-account-btn')
+
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyAFFpetgRFF8LoAClB7zVXUhceT8EKmn0A",
     databaseURL:'https://benthle-default-rtdb.asia-southeast1.firebasedatabase.app/',
@@ -25,9 +47,19 @@ const app = initializeApp(firebaseConfig);
 const database = getDatabase(app)
 const userInDB = ref(database,"users")
 
+
+const loggedInView = document.getElementById('loggedInView')
+const loggedOutView = document.getElementById('loggedOutView')
+
 // For Auth
 const auth = getAuth(app)
 const provider = new GoogleAuthProvider()
+
+/* EVENT LISTENERS */
+signInBtnEl.addEventListener('click', authSignInWithEmail)
+createAccountBtnEl.addEventListener('click', authCreateAccountWithEmail)
+
+signInWithGoogle.addEventListener('click', authSignUpWithGoogle)
 
 
 onAuthStateChanged(auth, (user) => {
@@ -101,21 +133,6 @@ const bookingArray = JSON.parse(localStorage.getItem('bookingArray'))
 
 const list = []
 
-
-/* SELECTING ELEMENT */
-const userDetailEl = document.getElementById('user-detail')
-const userContactEl = document.getElementById('user-contact')
-
-const hairstyleDetailEl = document.getElementById('hairstyle-detail')
-const barberDetailEl = document.getElementById('barber-detail')
-const bookEl = document.getElementById('book')
-const modalUserEl = document.getElementById('modal-user')
-const modal = document.getElementById('modal')
-const users = document.getElementById('users')
-
-const loggedInView = document.getElementById('loggedInView')
-const loggedOutView = document.getElementById('loggedOutView')
-
 hairstyleDetailEl.textContent = `Hairstyle: ${bookingArray[0].hairstyle}`
 barberDetailEl.textContent = `Barber: ${bookingArray[0].barber}`
 
@@ -146,7 +163,7 @@ function render(feedHtml){
     users.innerHTML = feedHtml
 }
 
-showLoggedOutView()
+
 
 function showLoggedInView(){
     showView(loggedInView)
